@@ -14,3 +14,9 @@ Feature: Assert Page Address Method
     When I follow "Big Delay"
      And I assert that I should be on "index.html"
     Then the assertion should throw an ExpectationException
+
+  Scenario: Page address with query parameters
+    Given I am on "/index.html?param1=test1&param2=test2"
+     Then I should be on "/index.html" with the following query parameters:
+        | param1 | test1 |
+        | param2 | test2 |
