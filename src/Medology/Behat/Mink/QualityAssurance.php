@@ -190,7 +190,7 @@ class QualityAssurance implements Context
     /**
      * Check a node element with specific text inside the qa element.
      *
-     * @When I :action the checkbox :checkbox in the :qaId
+     * @When /^I (?P<action>check|uncheck) the checkbox "(?P<checkbox>[^"]+)" in the "(?P<qaId>[^"]+)"$/
      *
      * @param  string               $action   The action on the checkbox.
      * @param  string               $checkbox The text inside the checkbox.
