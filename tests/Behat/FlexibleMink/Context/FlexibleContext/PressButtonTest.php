@@ -35,6 +35,9 @@ class PressButtonTest extends FlexibleContextTest
         return $flexible_context;
     }
 
+    /**
+     * Asserts an exception is thrown and the press method is not triggered if the node is not visible in the viewport.
+     */
     public function testFailingToSeeNodeElementIsVisibleInViewportPreventsButtonFromBeingPressed()
     {
         // Need mock with original constructor.
@@ -54,6 +57,9 @@ class PressButtonTest extends FlexibleContextTest
         $flexible_context->pressButton('this is a test');
     }
 
+    /**
+     * Asserts an exception is thrown and the press method is not triggered if the button is disabled.
+     */
     public function testAttemptingToPressDisabledButtonThrowsException()
     {
         $flexible_context = $this->getFlexibleMock();
